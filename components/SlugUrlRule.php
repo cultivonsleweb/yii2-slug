@@ -1,5 +1,5 @@
 <?php
-namespace cultivonsleweb\yii2\slug;
+namespace cultivonsleweb\yii2\slug\components;
 
 use Yii;
 use yii\web\ErrorAction;
