@@ -11,7 +11,31 @@ Yii 2 - Manage slugs with Yii 2 Framework
 ## Installation
 
 * Install [Yii 2](http://www.yiiframework.com/download) using your preferred method
+* Enable rewrite_url http://www.yiiframework.com/doc-2.0/guide-tutorial-shared-hosting.html
 * Install package via [composer](http://getcomposer.org/download/) ```"cultivonsleweb/yii2-slug": "dev-master"``` (not enable for moment)
+* Update config file *config/web.php* and *config/db.php*
+
+```php
+// app/config/web.php
+return [
+    'components' => [
+        // NOTE: in the yii2-advanced-app, the user component should be updated in
+        // 'frontend/config/main.php' and/or 'backend/config/main.php' (OR you can add it
+        // to 'common/config' if you remove it from frontend/backend)
+        'urlManager' => [
+                    'enablePrettyUrl' => true,
+                    'showScriptName' => false,
+                    'class' => 'cultivonsleweb\yii2\slug\components\SlugUrlRule',
+                    'rules' => []
+                ],
+    ],
+];
+// app/config/db.php
+return [
+    'class' => 'yii\db\Connection',
+    // set up db info
+];
+```
 
 ## Licence
 The MIT License (MIT)

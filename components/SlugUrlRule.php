@@ -10,6 +10,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\UrlRule;
 use yii\web\Request;
 use yii\web\UrlRuleInterface;
+use cultivonsleweb\yii2\slug\models\ClwSlugs;
 
 /**
  * Class SlugUrlRule
@@ -39,6 +40,22 @@ class SlugUrlRule extends UrlRule implements UrlRuleInterface {
      */
     public function parseRequest($manager, $request){
         $route = $params = '';
+
+        $sPathInfo = $request->getPathInfo();
+        $aPathInfo = explode("/",$sPathInfo);
+
+        $slug = ClwSlugs::find()
+            ->where('slug=:slug AND controller_action !=:action')
+            ->params([':slug'=>$aPathInfo[1],':action'=>'site/index'])
+            ->one();
+
+        if(!$slug)
+        {
+            return false;  // this rule does not apply
+        }
+
+        $route = $slug->controller_action;
+        $params['id_slug'] = $slug->id_slug;
         return [$route, $params];
     }
 
@@ -50,6 +67,16 @@ class SlugUrlRule extends UrlRule implements UrlRuleInterface {
      * @return string|boolean the created URL, or false if this rule cannot be used for creating this URL.
      */
     public function createUrl($manager, $route, $params){
-        return true;
+        $slug = false;
+
+        $slug = ClwSlugs::find()
+            ->where('id_slug=:slug AND controller_action !=:action')
+            ->params([':id_slug'=>$params[1],':action'=>'site/index'])
+            ->one();
+
+        if ( !$slug){
+            return false;
+        }
+        return "{$slug->slug}";
     }
 } 

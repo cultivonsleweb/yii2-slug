@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "cultivonsleweb\\yii2\\slug\\": ""
+            "cultivonsleweb\\yii2\\slug\\components\\SlugUrlRule": ""
         }
     }
 }
