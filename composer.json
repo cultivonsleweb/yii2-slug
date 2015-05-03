@@ -1,1 +1,21 @@
-{}
+{
+    "name": "cultivonsleweb/yii2-slug",
+    "homepage": "https://github.com/cultivonsleweb/yii2-slug",
+    "minimum-stability": "dev",
+    "type": "yii2",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://localhost/repositories/composer/package/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "amnah/yii2-user": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "cultivonsleweb\\yii2\\slug\\": ""
+        }
+    }
+}
