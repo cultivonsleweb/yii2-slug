@@ -18,15 +18,18 @@ Yii 2 - Manage slugs with Yii 2 Framework
 ```php
 // app/config/web.php
 return [
+    'aliases' => [
+            '@cultivonsleweb/yii2/slug' => '@vendor/cultivonsleweb/yii2-slug',
+    ],
     'components' => [
         // NOTE: in the yii2-advanced-app, the user component should be updated in
         // 'frontend/config/main.php' and/or 'backend/config/main.php' (OR you can add it
         // to 'common/config' if you remove it from frontend/backend)
         'urlManager' => [
-                    'enablePrettyUrl' => true,
-                    'showScriptName' => false,
-                    'class' => 'cultivonsleweb\yii2\slug\components\SlugUrlRule',
-                    'rules' => []
+                    'enablePrettyUrl' => true, // Disable r= routes
+                    'showScriptName' => false, // Disable index.php
+                    'enableStrictParsing' => true,
+                    'class' => 'cultivonsleweb\yii2\slug\components\SlugUrlManager',
                 ],
     ],
 ];
