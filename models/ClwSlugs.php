@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace cultivonsleweb\yii2\slug\models;
 
 use Yii;
 
