@@ -8,10 +8,10 @@ use Yii;
  * This is the model class for table "clw_slugs".
  *
  * @property integer $id_slug
- * @property string $slug
- * @property string $controller
- * @property string $action
- * @property string $controller_action
+ * @property string $prefix
+ * @property string $pattern
+ * @property string $route
+ * @property string $suffix
  */
 class ClwSlugs extends \yii\db\ActiveRecord
 {
@@ -29,9 +29,9 @@ class ClwSlugs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['slug', 'controller', 'action', 'controller_action'], 'required'],
-            [['slug', 'controller_action'], 'string'],
-            [['controller', 'action'], 'string', 'max' => 255]
+            [['prefix', 'pattern', 'route', 'suffix'], 'required'],
+            [['pattern', 'route'], 'string'],
+            [['prefix', 'suffix'], 'string', 'max' => 100]
         ];
     }
 
@@ -41,11 +41,11 @@ class ClwSlugs extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_slug' => Yii::t('app', 'Id Slug'),
-            'slug' => Yii::t('app', 'Slug'),
-            'controller' => Yii::t('app', 'Controller'),
-            'action' => Yii::t('app', 'Action'),
-            'controller_action' => Yii::t('app', 'Controller Action'),
+            'id_slug' => Yii::t('cultivonsleweb', 'Id Slug'),
+            'prefix' => Yii::t('cultivonsleweb', 'Prefix'),
+            'pattern' => Yii::t('cultivonsleweb', 'Slug'),
+            'route' => Yii::t('cultivonsleweb', 'Route'),
+            'suffix' => Yii::t('cultivonsleweb', 'Suffix'),
         ];
     }
 }

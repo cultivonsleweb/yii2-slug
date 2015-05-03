@@ -40,7 +40,7 @@ class SlugUrlRule extends UrlRule implements UrlRuleInterface {
      */
     public function parseRequest($manager, $request){
         $route = $params = '';
-
+die ("request: $request");
         $sPathInfo = $request->getPathInfo();
         $aPathInfo = explode("/",$sPathInfo);
 
