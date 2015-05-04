@@ -30,7 +30,7 @@ class SlugUrlManager extends UrlManager {
 
         parent::init();
     }
-
+/*
     public function parseRequest($request){
         return ['site/test'];
         if ($this->enablePrettyUrl) {
@@ -59,10 +59,10 @@ class SlugUrlManager extends UrlManager {
                 ]) as $obj){
                 return $obj->route;
             }
-            */
+            * /
         }
 
         return parent::parseRequest($request);
     }
-
+*/
 } 
