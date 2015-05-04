@@ -9,6 +9,7 @@ use cultivonsleweb\yii2\slug\models\ClwSlugs;
 class SlugUrlManager extends UrlManager {
 
     public function init (){
+        Yii::$app->getModule("slug")->init();
         foreach (ClwSlugs::find()->all() as $obj){
 
             foreach (ClwSlugs::find()->all() as $obj){

@@ -20,6 +20,9 @@ class Module extends \yii\base\Module implements BootstrapInterface {
 
     public function init(){
         parent::init();
+
+        $this->checkModuleProperties();
+
         // set up i8n
         if (empty(Yii::$app->i18n->translations['cultivonsleweb'])) {
             Yii::$app->i18n->translations['cultivonsleweb'] = [
