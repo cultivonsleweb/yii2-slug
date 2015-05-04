@@ -9,20 +9,21 @@ use cultivonsleweb\yii2\slug\models\ClwSlugs;
 class SlugUrlManager extends UrlManager {
 
     public function init (){
-
-
         foreach (ClwSlugs::find()->all() as $obj){
 
             $this->addRules([
-                "$obj->pattern" => "$obj->route"
-               // 'test-me' => 'site/test'
+                [
+                    'pattern' => "$obj->pattern",
+                    'route' => "$obj->route",
+                    'suffix' => "$obj->suffix",
+                    'defaults' => "$obj->defaults"
+                ]
             ], true);
         }
 
-        /*
-        $this->rules = [
-            'test-me' => 'site/test'
-        ];*/
         parent::init();
     }
+
+
+
 } 
