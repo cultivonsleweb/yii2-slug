@@ -40,6 +40,9 @@ return [
 ];
 ```
 
+* Run migration file
+    * ```php yii migrate --migrationPath=@vendor/cultivonsleweb/yii2-slug/migrations```
+
 ## Licence
 The MIT License (MIT)
 
