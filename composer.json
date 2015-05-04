@@ -2,7 +2,7 @@
     "name": "cultivonsleweb/yii2-slug",
     "homepage": "https://github.com/cultivonsleweb/yii2-slug",
     "minimum-stability": "dev",
-    "type": "yii2",
+    "type": "yii2-extension",
     "repositories": [
         {
             "type": "composer",
