@@ -4,9 +4,9 @@ Yii2 Slug
 Yii 2 - Manage slugs with Yii 2 Framework
 
 ## Features
-* create, update, delete slug
-* map route with controller/action
-* interface for manage slug
+* create, update, delete slug (in progress)
+* map route with controller/action (in testing)
+* interface for manage slug (in progress)
 
 ## Installation
 
