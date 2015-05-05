@@ -11,6 +11,7 @@ return [
     'route' => 'route',
     'Suffix' => 'Suffix',
     'suffix' => 'suffix',
+    'defaults:ntext' => 'Defaults',
     'Defaults' => 'Defaults',
     'defaults' => 'defaults',
     'View'=> 'View',
