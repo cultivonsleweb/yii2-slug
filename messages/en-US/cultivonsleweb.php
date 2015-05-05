@@ -1,16 +1,27 @@
 <?php
 return [
     'Clw Slugs' => 'Manage Slugs',
+    'Manage Slugs' => 'Manage Slugs',
     'Create Clw Slugs' => 'Create a slug',
     'Id Slug' => 'Id Slug',
+    'id Slug' => 'id Slug',
     'Slug' => 'Slug',
+    'slug' => 'slug',
     'Route' => 'Route',
+    'route' => 'route',
     'Suffix' => 'Suffix',
+    'suffix' => 'suffix',
     'Defaults' => 'Defaults',
+    'defaults' => 'defaults',
     'View'=> 'View',
+    'view'=> 'view',
     'Update'=> 'Update',
+    'update'=> 'update',
     'Delete' => 'Delete',
+    'delete' => 'delete',
     'Update Clw Slugs' => 'Update Clw Slugs',
     'Search' => 'Search',
-    'Reset' => 'Reset'
+    'search' => 'search',
+    'Reset' => 'Reset',
+    'reset' => 'reset'
 ];
