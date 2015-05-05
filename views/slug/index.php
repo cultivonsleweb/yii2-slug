@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel cultivonsleweb\yii2\slug\models\SlugSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('cultivonsleweb', 'Clw Slugs');
+$this->title = Yii::t('cultivonsleweb', 'Manage Slugs');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="clw-slugs-index">

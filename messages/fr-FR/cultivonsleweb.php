@@ -1,2 +1,4 @@
 <?php
-return [];
+return [
+    'Manage Slugs' => 'Gestion des slugs'
+];

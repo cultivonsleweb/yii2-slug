@@ -16,11 +16,41 @@ class m150504_074253_clw_slugs extends Migration
         ]);
 
         $this->insert('clw_slugs', [
+            'pattern' => 'slug/slug/index',
+            'route' => 'slug/slug/index',
+            'suffix' => '',
+            'defaults' => ''
+        ]);
+        $this->insert('clw_slugs', [
+            'pattern' => 'slug/slug/create',
+            'route' => 'slug/slug/create',
+            'suffix' => '',
+            'defaults' => ''
+        ]);
+        $this->insert('clw_slugs', [
+            'pattern' => 'slug/slug/update',
+            'route' => 'slug/slug/update',
+            'suffix' => '',
+            'defaults' => ''
+        ]);
+        $this->insert('clw_slugs', [
+            'pattern' => 'slug/slug/view',
+            'route' => 'slug/slug/view',
+            'suffix' => '',
+            'defaults' => ''
+        ]);
+        $this->insert('clw_slugs', [
+            'pattern' => 'slug/slug/delete',
+            'route' => 'slug/slug/delete',
+            'suffix' => '',
+            'defaults' => ''
+        ]);
+
+        $this->insert('clw_slugs', [
             'pattern' => 'home',
             'route' => 'site/index',
             'suffix' => '',
             'defaults' => ''
-
         ]);
     }
 

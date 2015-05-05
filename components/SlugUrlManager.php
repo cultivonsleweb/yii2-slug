@@ -28,42 +28,12 @@ class SlugUrlManager extends UrlManager {
                 ], true);
             }
         }
-
         parent::init();
     }
-/*
-    public function parseRequest($request){
-        return ['site/test'];
-        if ($this->enablePrettyUrl) {
-            $pathInfo = $request->getPathInfo();
-            if ( strstr($pathInfo, 'slug/')){
-                $str = explode("/",$pathInfo);
-                $key = 0;
-                foreach ($str as $index => $tag){
-                    if ( $tag == 'slug' ){
-                        $key = $index+1;
-                    }
-                }
-                if ( 0 != $key ){
-                    return ClwSlugs::find()->where([
-                        'id_slug' => $key
-                    ])->One()->route;
-                }
-            }
-            /*
-            $str = explode("/",$pathInfo);
-            print_r ( $str );
-            foreach (ClwSlugs::find()->where([
-                'id_slug' => ':slug'
-            ])->params([
-                    ':slug'=>$str[1]
-                ]) as $obj){
-                return $obj->route;
-            }
-            * /
-        }
 
+    public function parseRequest($request){
         return parent::parseRequest($request);
     }
-*/
+
+
 } 
