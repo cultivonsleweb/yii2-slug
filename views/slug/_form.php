@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'suffix')->textInput(['maxlength' => 100]) ?>
 
+    <?= $form->field($model, 'defaults')->textarea(['rows' => 6]) ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('cultivonsleweb', 'Create') : Yii::t('cultivonsleweb', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

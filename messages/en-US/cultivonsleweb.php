@@ -20,6 +20,7 @@ return [
     'Delete' => 'Delete',
     'delete' => 'delete',
     'Update Clw Slugs' => 'Update Clw Slugs',
+    'Update Clw Slugs:' => 'Update Clw Slugs:',
     'Search' => 'Search',
     'search' => 'search',
     'Reset' => 'Reset',
