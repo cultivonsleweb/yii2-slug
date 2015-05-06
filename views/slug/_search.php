@@ -15,15 +15,15 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_slug') ?>
+    <?= $form->field($model, 'id_slug')->label(Yii::t('cultivonsleweb','Id slug')) ?>
 
-    <?= $form->field($model, 'pattern') ?>
+    <?= $form->field($model, 'pattern')->label(Yii::t('cultivonsleweb','Pattern')) ?>
 
-    <?= $form->field($model, 'route') ?>
+    <?= $form->field($model, 'route')->label(Yii::t('cultivonsleweb','Route')) ?>
 
-    <?= $form->field($model, 'suffix') ?>
+    <?= $form->field($model, 'suffix')->label(Yii::t('cultivonsleweb','Suffix')) ?>
 
-    <?= $form->field($model, 'defaults') ?>
+    <?= $form->field($model, 'defaults')->label(Yii::t('cultivonsleweb','Defaults')) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('cultivonsleweb', 'Search'), ['class' => 'btn btn-primary']) ?>

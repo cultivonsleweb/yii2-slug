@@ -25,11 +25,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_slug',
-            'pattern:ntext',
-            'route:ntext',
-            'suffix',
-            'defaults:ntext',
+            [
+                'attribute' => 'id_slug',
+                'label' => Yii::t('cultivonsleweb', 'Id slug')
+            ],
+            [
+                'attribute' => 'pattern',
+                'label' => Yii::t('cultivonsleweb', 'Pattern')
+            ],
+            [
+                'attribute' => 'route',
+                'label' => Yii::t('cultivonsleweb', 'Route')
+            ],
+            [
+                'attribute' => 'suffix',
+                'label' => Yii::t('cultivonsleweb','Suffix')
+            ],
+            [
+                'attribute' => 'defaults',
+                'label' => Yii::t('cultivonsleweb', 'Defaults')
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
