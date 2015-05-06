@@ -7,6 +7,8 @@ return [
     'id Slug' => 'id Slug',
     'Slug' => 'Slug',
     'slug' => 'slug',
+    'Slug:' => 'Slug:',
+    'slug:' => 'slug:',
     'Pattern' => 'Pattern',
     'pattern' => 'pattern',
     'Route' => 'Route',

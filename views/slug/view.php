@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="clw-slugs-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Yii::t('cultivonsleweb', 'Slug:') . ' ' . Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a(Yii::t('cultivonsleweb', 'Update'), ['update', 'id' => $model->id_slug], ['class' => 'btn btn-primary']) ?>
