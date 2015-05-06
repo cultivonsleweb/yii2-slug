@@ -31,7 +31,7 @@ class ClwSlugs extends \yii\db\ActiveRecord
         return [
             [['pattern', 'route'], 'required'],
             [['pattern', 'route'], 'string'],
-            [['prefix', 'suffix'], 'string', 'max' => 100]
+            [['suffix'], 'string', 'max' => 100]
         ];
     }
 
@@ -42,7 +42,6 @@ class ClwSlugs extends \yii\db\ActiveRecord
     {
         return [
             'id_slug' => Yii::t('cultivonsleweb', 'Id Slug'),
-            'prefix' => Yii::t('cultivonsleweb', 'Prefix'),
             'pattern' => Yii::t('cultivonsleweb', 'Slug'),
             'route' => Yii::t('cultivonsleweb', 'Route'),
             'suffix' => Yii::t('cultivonsleweb', 'Suffix'),
