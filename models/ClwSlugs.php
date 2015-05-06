@@ -29,7 +29,7 @@ class ClwSlugs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['prefix', 'pattern', 'route', 'suffix'], 'required'],
+            [['pattern', 'route'], 'required'],
             [['pattern', 'route'], 'string'],
             [['prefix', 'suffix'], 'string', 'max' => 100]
         ];
